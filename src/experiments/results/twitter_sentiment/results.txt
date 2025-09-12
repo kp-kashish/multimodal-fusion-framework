@@ -1,0 +1,23 @@
+MULTIMODAL FUSION RESULTS: TWITTER_SENTIMENT
+============================================================
+
+Dataset: twitter_sentiment
+Task: classification
+Samples: 14,640
+Device: cpu
+
+MODEL RESULTS (Classification):
+----------------------------------------    
+Model                     Accuracy   F1 Score   Parameters  
+----------------------------------------
+Intermediate_Fusion       0.921      0.921      1,373,506   
+Attention_Fusion          0.917      0.914      3,026,306   
+Hybrid_Late_Fusion        0.922      0.923      2,660,966   
+Adaptive_Gating_Fusion    0.922      0.920      2,558,725   
+
+Files generated:
+- results.txt (this file)
+- Intermediate_Fusion_plots.png
+- Attention_Fusion_plots.png
+- Hybrid_Late_Fusion_plots.png
+- Adaptive_Gating_Fusion_plots.png

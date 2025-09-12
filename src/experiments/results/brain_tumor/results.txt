@@ -1,0 +1,23 @@
+MULTIMODAL FUSION RESULTS: BRAIN_TUMOR
+============================================================
+
+Dataset: brain_tumor
+Task: classification
+Samples: 1,000
+Device: cpu
+
+MODEL RESULTS (Classification):
+----------------------------------------
+Model                     Accuracy   F1 Score   Parameters  
+----------------------------------------
+Intermediate_Fusion       0.865      0.863      50,507,586  
+Attention_Fusion          0.875      0.874      26,909,314  
+Hybrid_Late_Fusion        0.855      0.853      75,874,374  
+Adaptive_Gating_Fusion    0.870      0.870      51,365,253  
+
+Files generated:
+- results.txt (this file)
+- Intermediate_Fusion_plots.png
+- Attention_Fusion_plots.png
+- Hybrid_Late_Fusion_plots.png
+- Adaptive_Gating_Fusion_plots.png

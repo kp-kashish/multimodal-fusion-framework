@@ -1,0 +1,23 @@
+MULTIMODAL FUSION RESULTS: JOB_SALARY
+============================================================
+
+Dataset: job_salary
+Task: regression
+Samples: 22,003
+Device: cpu
+
+MODEL RESULTS (Regression):
+----------------------------------------
+Model                     MAE        R2 Score   Parameters  
+----------------------------------------
+Intermediate_Fusion       0.180      0.573      107,201     
+Attention_Fusion          0.190      0.542      1,827,841   
+Hybrid_Late_Fusion        0.185      0.566      191,363     
+Adaptive_Gating_Fusion    0.185      0.559      546,820     
+
+Files generated:
+- results.txt (this file)
+- Intermediate_Fusion_plots.png
+- Attention_Fusion_plots.png
+- Hybrid_Late_Fusion_plots.png
+- Adaptive_Gating_Fusion_plots.png

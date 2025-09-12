@@ -1,0 +1,34 @@
+Intermediate Fusion
+
+Modality1 → Encoder1 → Repr1 ┐
+                             ├── Concatenate → Fusion Head → Prediction
+Modality2 → Encoder2 → Repr2 ┘
+
+___________________________________________________________________________________________________
+
+Hybrid Late Fusion
+
+Modality1 → Predictor1 → Pred1 ┐
+                               ├── Concatenate(Pred1, Pred2, x1, x2) → Meta-Model → Prediction
+Modality2 → Predictor2 → Pred2 ┘
+
+_________________________________________________________________________________________
+
+Attention Fusion
+
+x1 → Proj1 → h1 ┐
+                 │ Cross-Attn: h1 ↔ h2 → Combined → Self-Attn → Output Head
+x2 → Proj2 → h2 ┘
+
+_________________________________________________________________________________________
+
+Adaptive Gating Fusion
+
+x1 → Encoder1 → Enc1 ┐
+                      │
+x2 → Encoder2 → Enc2 ├── Concatenate → GateNet → [Gate1, Gate2, GateInteraction]
+                      │
+          [Enc1, Enc2] ──> InteractionEncoder → InteractionFeatures
+          
+FinalFeatures = Gate1*Enc1 + Gate2*Enc2 + GateInteraction*Interaction
+FinalFeatures → Prediction Head
