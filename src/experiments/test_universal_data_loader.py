@@ -18,7 +18,7 @@ except ImportError:
         from data.universal_data_loaderv2 import UniversalDataLoader
     except ImportError:
         try:
-            from universal_data_loaderv2 import UniversalDataLoader
+            from src.data.universal_data_loaderv2 import UniversalDataLoader
         except ImportError:
             print("Cannot find universal_data_loaderv2.py")
             print(f"Current dir: {current_dir}")
